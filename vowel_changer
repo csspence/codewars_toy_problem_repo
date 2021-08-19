@@ -9,6 +9,16 @@ fy, mi-minnih. hinnih!'
 ('adira wants to go to the park', 'o') =>'odoro wonts to go to tho pork'
 */
 
-function vowelChange(str, vow) {
-
+const vowelChange = (str, vow) => {
+  const vowels = {a: true, e: true, i: true, o: true, u: true};
+  let string = '';
+  for(let i = 0; i < str.length; i++) {
+    if(vowels[str[i]] === true) {
+      string += vow;
+    } else {
+      string += str[i];
+    }
+  }
+  
+  return string
 }
