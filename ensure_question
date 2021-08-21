@@ -7,6 +7,9 @@ For example (Input --> Output)
 "No?" --> "No?"
 */
 
-function ensureQuestion(s) {
-  // Code here
+const ensureQuestion = (s) => {
+  if(s[s.length-1] === '?') {
+    return s;
+  }
+  return s + '?';
 }
