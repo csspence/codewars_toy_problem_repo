@@ -17,6 +17,14 @@ loopArr([1, 5, 87, 45, 8, 8], 'right', 2);
 should produce result: [8, 8, 1, 5, 87, 45]
 */
 
-function loopArr(arr, direction, steps) {
-
+const loopArr = (arr, direction, steps) => {
+  for (let i = 0; i < steps; i++) {
+    if (direction === 'right'){
+      arr.unshift(arr.pop());
+    };
+    if (direction === 'left') {
+       arr.push(arr.shift());
+    };
+  }
+    return arr;
 }
