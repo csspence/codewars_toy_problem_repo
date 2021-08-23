@@ -10,6 +10,22 @@ Addendum: Your solution is only required to work for the ASCII character set.
 Please make sure you only swap cases for the vowels.
 */
 
-function swapVowelCase(str) {
-  // your code here
+const swapVowelCase = (str) => {
+  let str2 = ''
+  let temp;
+  const vowels = {a: true, e: true, i: true, o: true, u: true};
+  for(let i = 0; i < str.length; i++) {
+    temp = str[i].toLowerCase();
+    if(vowels[temp] === true) {
+      if(str[i] === str[i].toLowerCase()) {
+        str2 += str[i].toUpperCase();
+      } else {
+        str2 += str[i].toLowerCase();
+      }
+    } else {
+      str2 += str[i];
+    }
+  }
+  
+  return str2;
 }
