@@ -12,5 +12,13 @@ Examples
 */
 
 const prevMultOfThree = n => {
-  //your solution
+  let num = n.toString();
+  while(num.length > 0) {
+    if(Number(num) % 3 === 0) {
+      return Number(num);
+    } else {
+      num = num.slice(0, num.length - 1);
+    }
+  }
+  return null;
 }
