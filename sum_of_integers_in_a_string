@@ -3,7 +3,32 @@ Your task in this kata is to implement a function that calculates the sum of the
 
 Note: only positive integers will be tested.
 */
-
-function sumOfIntegersInString(s){
-  return // what the function name says
+const sumOfIntegersInString = (s) => {
+  let integers = [];
+  let currentNum = 'empty';
+  let sum = 0;
+  for(let i = 0; i < s.length; i++) {
+    if(Number(s[i]) * 0 === 0) {
+      if(currentNum === 'empty') {
+        currentNum = s[i];
+      } else {
+        currentNum += s[i];
+      }
+      if(i === s.length - 1 ) {
+        integers.push(Number(currentNum));
+      }
+    } else if (Number(s[i - 1]) * 0 === 0) {
+      integers.push(Number(currentNum));
+      currentNum = 'empty';
+    } else {
+      currentNum = 'empty';
+    }
+    console.log(currentNum);
+  }
+  console.log(integers);
+  for(let i = 0; i < integers.length; i++) {
+    sum += integers[i];
+  }
+  
+  return sum
 }
