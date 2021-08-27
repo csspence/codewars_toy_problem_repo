@@ -4,6 +4,9 @@ Make a program that takes a value (x) and returns "Bang" if the number is divisi
 Ex: Input: 105 --> Output: "BangBoom" Ex: Input: 9 --> Output: "Bang" Ex:Input: 25 --> Output: "Boom"
 */
 
-function multiple(x) {
-  // Good Luck
+const multiple = (x) => {
+  return x % 3 === 0 && x % 5 === 0 ? 'BangBoom'
+         : x % 3 === 0 ? 'Bang'
+         : x % 5 === 0 ? 'Boom'
+         : 'Miss';
 }
