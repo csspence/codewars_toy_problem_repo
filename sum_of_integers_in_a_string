@@ -23,9 +23,7 @@ const sumOfIntegersInString = (s) => {
     } else {
       currentNum = 'empty';
     }
-    console.log(currentNum);
   }
-  console.log(integers);
   for(let i = 0; i < integers.length; i++) {
     sum += integers[i];
   }
