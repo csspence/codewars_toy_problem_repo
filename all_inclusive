@@ -20,6 +20,21 @@ we will consider that there are no rotations of strng == ""
 and for any array arr: contain_all_rots("", arr) --> true
 */
 
-function containAllRots(strng, arr) {
-    // your code
+const containAllRots = (strng, arr) => {
+  console.log(strng);
+  console.log(arr);
+  let str = strng;
+  let counter = 0;
+  let placeholder;
+  while(counter < strng.length - 1) {
+    counter++;
+    if(!arr.includes(str)) {
+      return false;
+    }
+    placeholder = str.slice(str.length - 1);
+    str = str.slice(0, str.length - 1);
+    str = placeholder + str;
+  }
+  
+  return true;
 }
