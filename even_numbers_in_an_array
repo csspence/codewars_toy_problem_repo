@@ -8,6 +8,17 @@ For example:
 ([6, -25, 3, 7, 5, 5, 7, -3, 23], 1) => [6]
 */
 
-function evenNumbers(array, number) {
-  // good luck
+const evenNumbers = (array, number) => {
+  const evens = [];
+  const final = [];
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] % 2 === 0) {
+      evens.push(array[i]);
+    }
+  }
+  for(let i = evens.length - number; i < evens.length; i++) {
+    final.push(evens[i]);
+  }
+
+  return final;
 }
