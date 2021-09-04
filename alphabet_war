@@ -28,20 +28,20 @@ alphabetWar("wwwwwwz");  //=> Left side wins!
 */
 
 const alphabetWar = (fight) => {
-  let teams = {
-    left : {score: 0, w: 4, p: 3, b: 2, s: 1},
-    right : {score: 0, m: 4, q: 3, d: 2, z: 1}
-  };
+  const left = {w: 4, p: 3, b: 2, s: 1};
+  const right = {m: 4, q: 3, d: 2, z: 1}
+  let lScore = 0;
+  let rScore = 0;
   for(let i = 0; i < fight.length; i++) {
-    if(teams[left[fight[i]]]) {
-      teams[left[score]] += teams[left[fight[i]]];
-    } else if(teams[right[fight[i]]]) {
-      teams[right[score]] += teams[right[fight[i]]];
+    if(left[fight[i]] > 0) {
+      lScore++;
+    } else if(right[fight[i]] > 0) {
+      rScore++;
     }
   }
-   if(teams[left[score]] > teams[right[score]]) {
+   if(lScore > rScore) {
      return 'Left side wins!';
-   } else if(teams[left[score]] < teams[right[score]]) {
+   } else if(lScore < rScore) {
      return 'Right side wins!';
    } else {
      return 'Let\'s fight again!'
