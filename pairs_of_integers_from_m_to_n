@@ -9,6 +9,12 @@ n = 4
 result = [(2, 2), (2, 3), (2, 4), (3, 3), (3, 4), (4, 4)]
 */
 
-function generatePairs(m, n) {
-  
+const generatePairs = (m, n) => {
+  let result = [];
+  for(let i = m; i < n + 1; i++) {
+    for(let j = i; j < n + 1; j++) {
+      result.push([i, j]);
+    }
+  }
+  return result;
 }
