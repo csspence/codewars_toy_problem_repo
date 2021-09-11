@@ -6,6 +6,6 @@ For example, the number 417 is 110100001 in binary. Reversing the binary is 1000
 You can assume that the number is not negative.
 */
 
-function reverseBits (n) {
-  // your code here
+const reverseBits = (n) => {
+  return parseInt(num.toString(2).split("").reverse().join(""), 2);
 }
