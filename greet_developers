@@ -31,6 +31,10 @@ The order of the properties in the objects does not matter.
 The input array will always be valid and formatted as in the example above.
 */
 
-function greetDevelopers(list) {
-  // thank you for checking out my kata :)
+const greetDevelopers = (list) => {
+  for(let i = 0; i < list.length; i++) {
+    list[i].greeting = 'Hi ' + list[i].firstName + ', what do you like most about ' + list[i].language + '?';
+  }
+  console.log(list);
+  return list;
 }
