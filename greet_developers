@@ -33,7 +33,7 @@ The input array will always be valid and formatted as in the example above.
 
 const greetDevelopers = (list) => {
   for(let i = 0; i < list.length; i++) {
-    list[i].greeting = 'Hi ' + list[i].firstName + ', what do you like most about ' + list[i].language + '?';
+    list[i].greeting = 'Hi ' + list[i].firstName + ', what do you like the most about ' + list[i].language + '?';
   }
   console.log(list);
   return list;
