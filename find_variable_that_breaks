@@ -5,6 +5,6 @@ var x = something;
 x === x // returns false!
 */
 
-function findStrangeValue() {
-  // your code!
+const findStrangeValue = () => {
+  return NaN;
 }
