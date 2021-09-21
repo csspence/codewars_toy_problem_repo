@@ -13,6 +13,10 @@ The parameters (divisor, bound) passed to the function are only positive values 
 It's guaranteed that a divisor is Found .
 */
 
-function maxMultiple(divisor, bound){
-  //your code here
+const maxMultiple = (divisor, bound) => {
+  for(let i = bound; i > divisor + 1; i--) {
+    if(i % divisor === 0) {
+      return i;
+    }
+  }
 }
