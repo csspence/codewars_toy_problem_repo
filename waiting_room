@@ -16,6 +16,6 @@ Your task is to find last patient's chair's number.
 Input - N - integer greater than 2 - number of chairs. Output should positive integer too - last patient's chair's number
 */
 
-function lastChair(N){
-  // TODO
+const lastChair = (N) => {
+  return N - 1;
 }
