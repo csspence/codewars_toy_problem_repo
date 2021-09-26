@@ -7,6 +7,20 @@ Example
 [0, 0, 0, 0, 0] -> []
 */
 
-function onesCounter(input) {
+const onesCounter = (input) => {
+  const array = [];
+  let streak = 0;
+  for(let i = 0; i < input.length; i++) {
+    if(streak > 0 && input[i] !== 1) {
+      array.push(streak);
+      streak = 0;
+    } else if(input[i] === 1) {
+      streak++;
+    } 
+    if(i === input.length - 1 && streak > 0) {
+      array.push(streak);
+    }
+  }
   
+  return array;
 }
