@@ -16,6 +16,17 @@ becomes
 "01231203"
 */
 
-function compress(sentence) {
-  
+const compress = (sentence) => {
+  let words = sentence.toLowerCase().split(' ')
+  let res = []
+  for(let el of words) {
+    if(!res.includes(el)) {
+       res.push(el)
+   }
+  }
+  let s = ''
+  for (let el of words) {
+   s += res.indexOf(el)
+}
+  return s
 }
