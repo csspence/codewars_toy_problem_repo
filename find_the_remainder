@@ -12,7 +12,7 @@ Input
 Arguments will both be integers: positive, negative, or neutral (0)
 */
 
-function remainder(a, b){
-  // Divide the larger argument by the smaller argument and return the remainder
-  
+const remainder = (a, b) => {
+  return a > b ? a % b
+       : b % a;
 }
