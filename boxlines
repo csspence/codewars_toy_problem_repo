@@ -8,6 +8,6 @@ X,Y and Z are strictly positive, and can go as large as 2^16 - 1
 This is my first kata, so I hope every one will enjoy it <3
 */
 
-function f(x,y,z){
-  //TODO:Your code here
+const f = (x,y,z) => {
+  return 3*(x*y*z) +2*(x*y+x*z+y*z) + x+y+z;
 }
