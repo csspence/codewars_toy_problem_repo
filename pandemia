@@ -32,6 +32,16 @@ string s = "01000000X000X011X0X"
 ➕ For maps without "0" and "1" return 0 as there is no population.
 */
 
-function infected(s) {
-  return 0;
+const infected = (s) => {
+  let array = s.split('X');
+  let array2 = array;
+  let counter = 0;
+  array2 = array2.join('');
+  for(let i = 0; i < array.length; i++) {
+    if(array[i].includes('1')) {
+      counter += array[i].length;
+    }
+  }
+  
+  return 100 * (counter / array2.length);
 }
