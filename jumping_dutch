@@ -32,6 +32,21 @@ The final advice
 Just play in this kata, Don't experiment in real life ;-)
 */
 
-function sc(floor){
-  return ?
+const sc = (floor) => {
+  let str = '';
+  if(floor < 2) {
+    return '';
+  }
+  for(let i = 0; i < floor; i++) {
+    if(i !== floor - 1) {
+      str += 'Aa~ ';
+    }
+    if(i === floor - 1 && floor > 6) {
+      str += 'Pa!';
+    } 
+    if(i === floor - 1 && floor <= 6) {
+      str += 'Pa! Aa!'
+    }
+  }
+  return str;
 }
