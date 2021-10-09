@@ -17,6 +17,15 @@ removeChars('1 + 1 = 2')    ==> '    ' (string with 4 spaces)
 removeChars("0123456789(.)+,|[]{}=@/~;^$'<>?-!*&:#%_")  ==> '' (empty string)
 */
 
-function removeChars(s) {
+const removeChars = (s) => {
+  let clean = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let str = '';
   
+  for(let i = 0; i < s.length; i++) {
+    if(clean.includes(s[i]) || s[i] === ' ') {
+      str += s[i];
+    }
+  }
+  
+  return str;
 }
