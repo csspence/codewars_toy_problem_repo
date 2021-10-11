@@ -12,6 +12,15 @@ example:
 Write a function named isNice/IsNice that returns true if its array argument is a Nice array, else false. You should also return false if input array has no elements.
 */
 
-function isNice(arr){
-  return `Ì am Nice `
+const isNice = (arr) => {
+  if(arr.length === 0) {
+    return false;
+  }
+  for(let i = 0; i < arr.length; i++) {
+    
+    if(arr.includes(arr[i] - 1) === false && arr.includes(arr[i] + 1) === false) {
+      return false;
+    }
+  }
+  return true;
 }
