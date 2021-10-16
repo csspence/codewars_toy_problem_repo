@@ -9,6 +9,7 @@ reference
 use this as a reference encoding
 */
 
-function generateLink(user) {
-
+const generateLink = (user) => {
+  return user.split(' ').length === 1 ? 'http://www.codewars.com/users/' + user
+         : 'http://www.codewars.com/users/' + (user.split(' ')).join('%20');
 }
