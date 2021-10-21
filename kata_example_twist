@@ -6,5 +6,16 @@ Add the value "codewars" to the array websites/Websites 1,000 times.
 var websites = []
 */
 
-// add the value "codewars" to the websites array 1,000 times
 var websites = []
+
+
+const addThem = (array) => {
+  let counter = 0;
+  while(counter < 1000) {
+    array.push('codewars');
+    counter++;
+  }
+  return array;
+};
+
+addThem(websites)
