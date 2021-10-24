@@ -17,7 +17,23 @@ blackAndWhite([5,13]) should return "It's a black array"
 blackAndWhite([5,12]) should return "It's a white array" 
 */
 
-function blackAndWhite(arr){
-  //coding here...
+const blackAndWhite = (arr) => {
+  let obj = {};
+  if(typeof arr !== 'object' || arr === null) {
+    return 'It\'s a fake array';
+  }
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] === 5) {
+      obj[5] = true;
+    }
+    if(arr[i] === 13) {
+      obj[13] = true;
+    }
+  }
   
+  if(obj[5] === true && obj[13] === true) {
+    return 'It\'s a black array';
+  } else {
+    return 'It\'s a white array';
+  }
 }
