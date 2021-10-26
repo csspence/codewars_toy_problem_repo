@@ -7,7 +7,16 @@ underscore
 Length should be between 4 and 16 characters (both included).
 */
 
-function validateUsr(username) {
-  res =  //regex here/.test(username) 
-  return res
+const validateUsr = (username) => {
+  let ok = '_1234567890abcdefghijklmnopqrstuvwxyz';
+  if(username.length > 16 || username.length < 4) {
+    return false;
+  }
+  for(let i = 0; i < username.length; i++) {
+    if(!ok.includes(username[i])) {
+      return false;
+    }
+  }
+  
+  return true;
 }
