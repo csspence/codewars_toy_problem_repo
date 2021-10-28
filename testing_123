@@ -11,6 +11,11 @@ number([]) // => []
 number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
 */
 
-var number=function(array){
-  //your awesome code here
+const number = (array) => {
+  let arr = [];
+  for(let i = 0; i < array.length; i++) {
+    arr.push(i+1 + ': ' + array[i]);
+  }
+  
+  return arr;
 }
