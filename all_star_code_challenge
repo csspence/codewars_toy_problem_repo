@@ -14,6 +14,13 @@ median([33,99,100,30,29,50]) // =>  41.5
 median([3,2,1]) // => 2
 */
 
-function median(array) {
-//code here
+const median = (array) => {
+  let sorted = array.sort(function(a, b) {
+    return a - b;
+  });
+  if(sorted.length % 2 === 0) {
+    return (sorted[Math.floor(sorted.length/2)] + sorted[Math.floor(sorted.length/2) - 1]) / 2;
+  } else {
+    return sorted[Math.floor(sorted.length / 2)];
+  }
 }
