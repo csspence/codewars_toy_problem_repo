@@ -8,6 +8,13 @@ Details
 You will be given a string of numbers and letters mixed up, you have to return all the numbers in that string in the order they occur.
 */
 
-var FilterString = function(value) {
-  //Complete this function :)
+const FilterString = (value) => {
+  let num = '';
+  for(let i = 0; i < value.length; i++) {
+    if(Number(value[i]) * 0 === 0) {
+      num += value[i];
+    }
+  }
+  
+  return Number(num);
 }
