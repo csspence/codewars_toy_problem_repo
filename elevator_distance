@@ -14,6 +14,18 @@ elevatorDistance([3,3]) = 0
 Array will always contain at least 2 floors. Random tests will contain 2-20 elements in array, and floor values between 0 and 30.
 */
 
-function elevatorDistance(array) {
-  // your code here
+const elevatorDistance = (array) => {
+  let current = array[0];
+  let counter = 0;
+  for(let i = 1; i < array.length; i++) {
+    if(current > array[i]) {
+      counter += (current - array[i]);
+    } else if(current < array[i]) {
+      counter += (array[i] - current);
+    }
+    current = array[i];
+  }
+  
+  
+  return counter;
 }
