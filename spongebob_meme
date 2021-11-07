@@ -10,6 +10,18 @@ spongeMeme("stop Making spongebob Memes!") // => 'StOp mAkInG SpOnGeBoB MeMeS!'
 spongeMeme("colored teens cant Be successful in tech") // =>'CoLoReD TeEnS CaNt bE SuCcEsSfUl iN TeCh'
 */
 
-function spongeMeme(sentence) {
+const spongeMeme = (sentence) => {
+  let upperCase = true;
+  let str = '';
+  for(let i = 0; i < sentence.length; i++) {
+    if(upperCase === true) {
+      upperCase = false;
+      str += sentence[i].toUpperCase();
+    } else {
+      upperCase = true;
+      str += sentence[i].toLowerCase();
+    }
+  }
   
+  return str;
 }
