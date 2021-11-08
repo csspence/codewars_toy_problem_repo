@@ -5,6 +5,22 @@ solve("100*b/y") = "y/b*100"
 solve("a+b-c/d*30") = "30*d/c-b+a"
 */
 
-function solve(eq){
-    //..
+const solve = (eq) => {
+  let arr = [];
+  let signs = '*/-+';
+  let current = '';
+  for(let i = 0; i < eq.length; i++) {
+    if(signs.includes(eq[i])) {
+      arr.push(current);
+      current = '';
+      arr.push(eq[i]);
+    } else {
+      current += eq[i];
+    }
+    if(i === eq.length - 1 && current.length > 0) {
+      arr.push(current);
+    }
+  }
+  arr.reverse();
+  return arr.join('');
 }
