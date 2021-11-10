@@ -7,6 +7,12 @@ For example:
 Strings will only contain letters and spaces, with exactly 1 space between words, and no leading/trailing spaces.
 */
 
-function makeString(s){
-  // ...
+const makeString = (s) => {
+  let arr = s.split(' ');
+  let str = '';
+  for(let i = 0; i < arr.length; i++) {
+    str += arr[i][0];
+  }
+  
+  return str;
 }
