@@ -5,7 +5,14 @@ removeVowels("drake") // => "drk"
 removeVowels("aeiou") // => ""
 */
 
-var removeVowels = function(str){
-//code here
-
+const removeVowels = (str) => {
+  let vowels = 'aeiou';
+  let s = '';
+  for(let i = 0; i < str.length; i++) {
+    if(!vowels.includes(str[i])) {
+      s += str[i];
+    }
+  }
+  
+  return s;
 }
