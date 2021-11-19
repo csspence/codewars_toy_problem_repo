@@ -14,5 +14,13 @@ Examples
 */
 
 const sequenceSum = (begin, end, step) => {
-  // May the Force be with you
+  let sum = 0;
+  if(begin > end) {
+    return sum;
+  }
+  for(let i = begin; i < end + 1; i = i + step) {
+    sum += i;
+  }
+  
+  return sum;
 };
