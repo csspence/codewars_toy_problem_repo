@@ -18,6 +18,17 @@ D = 6
 result = [6, 3, 7, 5, 4, 7]
 */
 
-function lastDigit(n, d) {
+const lastDigit = (n, d) => {
+  let arr = [];
+  let str = n.toString();
+  for(let i = 0; i < str.length; i++) {
+    arr.push(Number(str[i]));
+  }
+  if(d > arr.length) {
+    return arr
+  } else if(d <= 0) {
+    return [];
+  }
   
+  return arr.slice(arr.length-d, arr.length);
 }
