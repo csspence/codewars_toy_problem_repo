@@ -14,6 +14,17 @@ Your code must return true or false (not 'true' and 'false') depending upon whet
 Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
 */
 
-function narcissistic(value) {
-  // Code me to return true or false
+const narcissistic = (value) => {
+  let arr = value.toString().split('');
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++) {
+    sum += Math.pow(Number(arr[i]), arr.length);
+  }
+  
+  if(sum === value) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
