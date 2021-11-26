@@ -9,6 +9,12 @@ Examples
 1000 ->    1
 */
 
-function reverseNumber(n) {
-  // ...
+const reverseNumber = (n) => {
+  console.log(n);
+  let num = Number(n.toString().split('').reverse().join(''))
+  if(n > -1) {
+    return num;
+  } else {
+    return num;
+  }
 }
