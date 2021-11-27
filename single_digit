@@ -15,6 +15,24 @@ Given 123456789 the function should return 1:
 10000 --> (sum of binary digits) 1
 */
 
-function singleDigit(n) {
-  
+const singleDigit = (n) => {
+  const convert = (number) => {
+    let num = number;
+    let binary = (num % 2).toString();
+    for (; num > 1; ) {
+        num = parseInt(num / 2);
+        binary =  (num % 2) + (binary);
+    }
+    return binary;
+  }
+  let bin = convert(n);
+  let bStr = bin.toString();
+  let sum = 0;
+  if(n.toString().length === 1)  {
+    return n;
+  }
+  for(let i = 0; i < bStr.length; i++) {
+    sum += Number(bStr[i]);
+  }
+  return singleDigit(sum);
 }
