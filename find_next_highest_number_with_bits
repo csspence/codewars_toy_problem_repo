@@ -11,6 +11,33 @@ Input: 323423 => Output: 323439 (1001110111101011111 => 1001110111101101111)
 First some static tests, later on many random tests too;-)!
 */
 
-function nextHigher(n) {
-  // your code here
+const nextHigher = (n) => {
+  const convert = (number) => {
+    let num = number;
+    let binary = (num % 2).toString();
+    for (; num > 1; ) {
+        num = parseInt(num / 2);
+        binary =  (num % 2) + (binary);
+    }
+    return binary;
+  }
+  const counter = (number) => {
+    let bit = convert(number);
+    let ones = 0;
+    for(let i = 0; i < bit.length; i++) {
+      if(bit[i] === '1') {
+        ones++;
+      }
+    }
+    return ones;
+  }
+  const nBits = counter(n);
+  let current = n + 1;
+  while(current) {
+    if(counter(current) === nBits) {
+      return current;
+    } else {
+      current++;
+    }
+  }
 }
