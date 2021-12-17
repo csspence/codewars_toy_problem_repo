@@ -7,8 +7,19 @@ Example
 The Stanton measure of [1, 4, 3, 2, 1, 2, 3, 2] is 3, because 1 occurs 2 times in the array and 2 occurs 3 times.
 */
 
-/*
-  function:- stantonMeasure
-  input:- integer array
-  output:- stanton measure of the array
-*/
+const stantonMeasure = (array) => {
+  let n = 0;
+  let stanton = 0;
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] === 1) {
+      n++;
+    }
+  }
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] === n) {
+      stanton++;
+    }
+  }
+  
+  return stanton;
+}
