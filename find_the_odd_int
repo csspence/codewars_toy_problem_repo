@@ -11,7 +11,23 @@ Examples
 [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 */
 
-function findOdd(A) {
-  //happy coding!
-  return 0;
+const findOdd = (A) => {
+  let obj = {};
+  let arr;
+  let index;
+  for(let i = 0; i < A.length; i++) {
+    if(!obj[A[i]]) {
+      obj[i] = 1;
+    } else {
+      obj[A[i]]++;
+    }
+  }
+  arr = Object.keys(obj);
+  for(let i = 0; i < arr.length; i++) {
+    console.log(arr);
+    index = Number(obj[arr[i]]);
+    if(index % 2 !== 0) {
+      return arr[i];
+    }
+  }
 }
