@@ -6,6 +6,9 @@ Example:
 doubleEveryOther([1,2,3,4]) => [ 1, 4, 3, 8 ]
 */
 
-function doubleEveryOther(a) {
+const doubleEveryOther = (a) => {
+  for(let i = 1; i < a.length; i = i + 2) {
+    a[i] = a[i] * 2;
+  }
   return a;
 }
